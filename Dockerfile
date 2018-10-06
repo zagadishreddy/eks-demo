@@ -23,3 +23,5 @@ COPY . .
 
 # Asset precompile
 RUN bundle exec rake assets:precompile
+
+CMD ["bundle", "exec", "rails", "s"]

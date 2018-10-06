@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eks-demo
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: eks-demo
+    spec:
+      containers:
+      - name: eks-demo
+        image: 246648750489.dkr.ecr.us-east-1.amazonaws.com/eks-demo:latest
+        ports:
+        - containerPort: 3000
